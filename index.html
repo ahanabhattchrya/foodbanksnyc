@@ -1,1 +1,305 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This website lists food bank locations in NYC. Users can search and give to the food banks.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"">
+    <title>NYC Food Banks</title>
+    <script ></script>
+    <!-- Bootstrap Stylesheet CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Bootstrap for Zip search-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="sticky-2" style="background-color: #ffffff">
+    <!--Navigation bar-->
+    <div id="navbar">
+      <header>
+        <div class="info">
+          <div class="container">
+            <div class="row">
+              <div class="span6 info-text"> </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"> <a class="nav-link" href="#Home">Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#About">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#FoodBanks">Food Banks</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#Contribute">Donate/Volunteer</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#Team">Team</a> </li>
+            </ul>
+        </div>
+      </header>
+      
+    </div>
+    <!--Landing page-->
+    <section id="Home">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <img src="header.png" alt="Looking to give back to your community through supporting food banks? Use our tool to find a NYC food bank that fits your criteria! We provide information on the food bank locations, operating hours, volunteer information, food availability, donation needs, and operation guidelines." width="100%"></img>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--About Us-->
+    <section id="About">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <h1>About</h1>
+            <p>Even before the COVID-19 pandemic, New York City struggled with a hunger crisis. According to City Harvest, the pre-COVID figures show that 2.5 million working-age New Yorkers were struggling to make ends meet. Nearly 1.2 million New Yorkers were experiencing food insecurity (defined by the U.S. Department of Agriculture as a “lack of constant access to enough food for an active, healthy life”). During the current pandemic, the situation is even more dire: Over 1.5 million New Yorkers are struggling to feed themselves and their families (38% increase from pre-COVID statistics). One in four children are experiencing food insecurity (49% increase from pre-COVID statistics).</p>
+            <p>Right now, it is even more important to support local food banks. Our team recognized that finding information about food banks (including their hours of operation, location, and requested items) can be difficult. So, we made this tool so people can easily search for food banks that match their criteria, making it easier for people to support food banks.</p>
+          </div>
+        </div>
+      </div>  
+    </section>
+
+    <!--Food Banks list/map-->
+    <section id="FoodBanks">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <p>
+              <h1>Find Your Local Food Bank</h1>
+              Find your local community food bank to find food or give back to the community. We provide information on the food bank locations, operating hours, volunteer information, food availability, donation needs, and operation guidelines.
+            </p>
+            <div id="sidebar" class="span4">
+              <div class="grid_3 sidebar">
+                <hr>
+                <p style="text-align:center">
+                  <iframe src="map.html" style="height:300px; width:500px; border:2px solid yellow;" title="Food Banks Map"></iframe>
+                </p>
+                <!--Search Food Bank form-->
+                <div class="widget">
+                  <h3>Find Nearest Food Bank:</h3>
+                  <form id="form" method="post">
+                    Enter Street Address:
+                    <br>
+                    <input name="address" type="text" value size="35" maxlength="35">
+                    <br>
+                    Enter Zip Code:
+                    <br>
+                    <input name="zipcode" type="text" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$">
+                    <br>
+                    <p style="text-align:left">
+                      <br>
+                      <button type="button">Search</button>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Donation Guidelines (infographic)-->
+          <div class="span8">
+            <h3>General Guidelines</h3>
+            Check our infographic below and <a href="#FoodBanks" style="color: #50b4d8">your local food banks</a>' specific guidelines for what foods you should and should not donate.
+            <img src="infographic.png" alt="Check our infographic and your local food banks' specific guidelines for what foods you should and should not donate." width="90%"></img>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Donate/Volunteer-->
+    <section id="Contribute">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <p>
+              <h1>Donate / Volunteer</h1>
+              Donate food/money to your local food banks. Sign up to volunteer at the food banks.
+              <!--Donate Money form-->
+              <div class="Donate">
+                <h3>
+                  Donate Money
+                </h3>
+                <p>
+                  Make a secure donation via credit/debit card or PayPal.
+                  <form name="payment" id="PaymentForm" action="" method="post" onsubmit="">
+                    <div class="donation-form container responsive">
+                      <div class="donation-form content">
+                        <input type="hidden" name="donation-amt" id="donation-amt" value class>
+                        <input type="hidden" name="currency" id="currency" value="en_US" class>
+                        <div class="form-row">
+                          <div class="intro">
+                            <h6>Any donation amount makes an impact.</h6>
+                          </div>
+                        </div>
+                        <div class="form-row-amount">
+                          <h5 id="dnt-amt">Donation Amount<em>(Required)</em>
+                          </h5>
+                          <div class="frequency-toggle">
+                            <label for="freq-onetime" class="button frequency onetime active">
+                              <button type="button">One-Time</button>
+                              <input type="radio" name="freq" id="freq-onetime" value="onetime" style="display: none;">
+                            </label>
+                            <label for="freq-monthly" class="button frequency monthly active">
+                              <button type="button">Monthly</button>
+                              <input type="radio" name="freq" id="freq-monthly" value="monthly" style="display: none;">
+                            </label>
+                          </div>
+                          <div class="donation-amt">
+                            Enter Amount:
+                            <input type="number" min="1" step="any" />
+                          </div>
+                        </div>
+                        <br>
+                        <div class="form-row-type">
+                          <h5 id="dnt-type">Donation Type<em>(Required)</em>
+                          </h5>
+                          <div class="flex-container">
+                            <label for="type-card" class="button type card active" style="max-width: 33%">
+                              <button type="button">Credit/Debit Card</button>
+                              <input type="hidden" name="dnt-type" id="type-card" value="card" style="display: none;">
+                            </label>
+                            <label for="type-paypal" class="button type paypal active">
+                              <button type="button">PayPal</button>
+                              <input type="hidden" name="dnt-type" id="type-paypal" value="paypal" style="display: none;">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-row-billing">
+                          <h5 id="billing">Billing Information<em>(Required)</em>
+                          </h5>
+                          <div id="firstname">
+                            <span class="field-required"></span>
+                            <label for="billing_firstname">First Name</label>
+                            <input type="text" name="billing_firstname" id="billing_firstname" value maxlength="50">
+                            <input type="hidden" name="billing_firstname_submit" id="billing_firstname_submit" value="true">
+                          </div>
+                          <div id="lastname">
+                            <span class="field-required"></span>
+                            <label for="billing_lastname">Last Name</label>
+                            <input type="text" name="billing_lastname" id="billing_lastname" value maxlength="50">
+                            <input type="hidden" name="billing_lastname_submit" id="billing_lastname_submit" value="true">
+                          </div>
+                          <div id="address">
+                            <span class="field-required"></span>
+                            <label for="billing_address">Address</label>
+                            <input type="text" name="billing_address" id="billing_address" value maxlength="50">
+                            <input type="hidden" name="billing_address_submit" id="billing_address_submit" value="true">
+                          </div>
+                          <div id="email">
+                            <span class="field-required"></span>
+                            <label for="billing_email">Email Address</label>
+                            <input type="text" name="billing_email" id="billing_email" value maxlength="255">
+                            <input type="hidden" name="billing_email_submit" id="billing_email_submit" value="true">
+                            <fieldset>
+                              <input type="checkbox" name="subscribe" id="subscribe" value="true">
+                              <label class="checkbox" for="subscribe">I agree to receive updates related to NYC Food Banks.</label>
+                            </fieldset>
+                            <input type="hidden" name="subscribe" id="subscribe" value="true">
+                          </div>
+                        </div>
+                        <div class="form-row-cardinfo">
+                          <h5 id="cardinfo">Payment Information<em>(Required)</em>
+                          </h5>
+                          <div id="cardnumber">
+                            <span class="field-required"></span>
+                            <label for="cardnumber">Card Number</label>
+                            <input type="text" name="cardnumber" id="cardnumber" value maxlength="22">
+                            <input type="hidden" name="cardnumber_submit" id="cardnumber_submit" value="true">
+                          </div>
+                          <button type="button">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </p>
+
+                <h3>
+                  Donate Food
+                </h3>
+                <p>
+                  Add food to Food banks in need. Check our <a href="#FoodBanks" style="color: #50b4d8">list</a> for types of food accepted at your local food banks.
+                </p>
+              </div>
+              <div class="Volunteer">
+                <h3>
+                  Volunteer
+                </h3>
+                <p>
+                  Sign up for time slots to volunteer at your local food banks. Make sure to check with the <a href="#FoodBanks" style="color: #50b4d8">food banks</a> about what opportunities are available. 
+                  <p>
+                    Here are some activites you can do as a volunteer:
+                    <ul>
+                      <li>
+                        Sorting and Packing foods.
+                      </li>
+                      <li>
+                        Tabling at drive-thru food banks, with no-contact delivery.
+                      </li>
+                      <li>
+                        Monitoring our online resources for all food banks.
+                      </li>
+                    </ul>
+                  </p>
+                </p>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--Team Intro-->
+    <section id="Team">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <h1>Meet the Team!</h1>
+            <img src="4.png" style="width:900px; margin-left: 100px;" width="100%"></img>
+            <ul style="list-style-type:none">
+                <a href="https://www.linkedin.com/in/ah4na"><li style="padding-left:100px">Ahana Bhattacharya</li></a>
+                <a href="https://www.linkedin.com/in/alice-wang-5276111b5/"><li style="padding-left:340px">Alice Wang</li></a>
+            </ul>
+            <img src="5.png" style="width:900px; margin-left: 100px;" width="100%"></img>
+            <ul style="list-style-type:none">
+                <a href="https://www.linkedin.com/in/alishakh/"><li style="padding-left:130px; padding-bottom:20px">Alisha Khan </li></a>
+                <a href="https://www.linkedin.com/in/huyenpham2790/"><li style="padding-left:370px">Huyen Pham</li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+          <div class="row">
+            <h5>Our References</h5>
+            <ul class="footer_website_links">
+              <li>
+                <a href="https://www.foodpantries.org/ci/ny-new_york" style="text-decoration:none; color: #50b4d8">FoodPantries.org</a>
+              </li>
+              <br>
+              <li>
+                <a href="https://www.cityharvest.org/food-insecurity/" style="text-decoration:none; color: #50b4d8">City Harvest</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subfooter">    
+        <div class="container">
+            <div class="span6" style="text-align:center">@Copyright 2021 - Lord of the Wings</div>
+            <div class="span6" style="text-align:center">NYC Food Banks lists food banks in New York City. The website is made by group Lord of the Wings (Alice Wang, Alisha Khan, Huyen Pham, and Ahana Bhattacharya) as our project for RTC Black Wings Hackathon.</div>
+          </div>
+        </div>
+      </div>
+    <a href="#" id="toTop" style="display: inline;text-decoration:none; color: #ffaea5">
+      <span id="toTopHover" style="opacity: 0; margin-left: 20px"></span>
+      Back to Top
+    </a>
+  </body>
+</html>
