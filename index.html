@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="This website lists food bank locations in NYC. Users can search and give to the food banks.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC Food Banks</title>
-    <script ></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="script.js"></script>
     <!-- Bootstrap Stylesheet CSS -->
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -71,26 +72,37 @@
             <div id="sidebar" class="span4">
               <div class="grid_3 sidebar">
                 <hr>
-                <p style="text-align:center">
+                <p align="center">
                   <iframe src="map.html" style="height:300px; width:500px; border:2px solid yellow;" title="Food Banks Map"></iframe>
                 </p>
                 <!--Search Food Bank form-->
                 <div class="widget">
                   <h3>Find Nearest Food Bank:</h3>
-                  <form id="form" method="post">
+                  <form id="fbform" method="post">
                     Enter Street Address:
                     <br>
                     <input name="address" type="text" value size="35" maxlength="35">
                     <br>
                     Enter Zip Code:
                     <br>
-                    <input name="zipcode" type="text" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$">
+                    <input id="zip" name="zipcode" type="text" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$">
                     <br>
                     <p style="text-align:left">
                       <br>
-                      <button type="button">Search</button>
+                      <button id="fbbutton" type="button" >Search</button>
                     </p>
                   </form>
+                  <table id="fbtable" class="table" cellpadding="10">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Telephone</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -180,7 +192,7 @@
                           </div>
                           <div id="address">
                             <span class="field-required"></span>
-                            <label for="billing_address">Address</label>
+                            <label for="billing_address">Billing Address</label>
                             <input type="text" name="billing_address" id="billing_address" value maxlength="50">
                             <input type="hidden" name="billing_address_submit" id="billing_address_submit" value="true">
                           </div>
@@ -231,12 +243,15 @@
                       <li>
                         Sorting and Packing foods.
                       </li>
+                      <br>
                       <li>
                         Tabling at drive-thru food banks, with no-contact delivery.
                       </li>
+                      <br>
                       <li>
                         Monitoring our online resources for all food banks.
                       </li>
+                      <br>
                     </ul>
                   </p>
                 </p>
