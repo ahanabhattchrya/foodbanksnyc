@@ -10,7 +10,7 @@ d3.csv("food_banks.csv").then(function (data) {
 
     d3.event.preventDefault();
 
-    var inputValue = parseInt(d3.select("zipcode").property("value"));
+    var inputValue = parseInt(d3.select("#zip").property("value"));
 
     var filteredBanks = foodbanks.filter(foodbanks => foodbanks.zipcode.includes(inputValue));
 
