@@ -1,0 +1,74 @@
+html{
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: #f17a7e !important;
+}
+
+h3 {
+  color: #f9a66c !important;
+}
+
+h5 {
+  color: #ffc8a2;
+}
+
+p {
+  color: #4a6163;
+}
+
+button {
+  background-color: #ffc8a2;
+}
+
+.justify-content-center a{
+    margin-top: 30px;
+    padding-bottom: 30px;
+    color: #a40606 !important;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+}
+
+.justify-content-center .active{
+    color: black !important;
+}
+
+.justify-content-center :hover{
+    color: black !important;
+}
+
+.span-6{
+    text-align: center
+}
+
+#to-top{
+    margin-left: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+}
+
+.Volunteer ul li {
+  list-style-type: bengali-moz-bengali;
+}
