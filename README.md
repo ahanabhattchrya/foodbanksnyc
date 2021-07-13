@@ -1,6 +1,6 @@
 # About
 
-This is the project submission that won first place for the Black Wings hackathon hosted by Rewriting the code built by Ahana Bhattacharya, Alice Wang, Alisha Khan and Huyen Pham.
+This is the project submission that won first place in the Black Wings hackathon hosted by Rewriting the code. Built by Ahana Bhattacharya, Alice Wang, Alisha Khan and Huyen Pham.
 
 Even before the COVID-19 pandemic, New York City struggled with a hunger crisis. According to City Harvest, the pre-COVID figures show that 2.5 million working-age New Yorkers were struggling to make ends meet. Nearly 1.2 million New Yorkers were experiencing food insecurity (defined by the U.S. Department of Agriculture as a “lack of constant access to enough food for an active, healthy life”). During the current pandemic, the situation is even more dire: Over 1.5 million New Yorkers are struggling to feed themselves and their families (38% increase from pre-COVID statistics). One in four children are experiencing food insecurity (49% increase from pre-COVID statistics).
 
